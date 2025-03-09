@@ -1,0 +1,28 @@
+{
+  "name": "foobar",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Mike Cunneen",
+  "private": "false",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "description": "demo of gravity-assist",
+  "scripts": {
+    "test": "echo TODO: WRITE TESTS",
+    "testdotenvx": "dotenvx run -- node test/testdotenvx.js",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit",
+    "release-changelog": "git-cliff --unreleased --prepend CHANGELOG.md --tag ",
+    "release": "dotenvx run release-it -- -i -u"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@dotenvx/dotenvx": "^1.38.4",
+    "git-cliff": "^2.8.0",
+    "husky": "^9.1.7",
+    "release-it": "^18.1.2"
+  }
+}
